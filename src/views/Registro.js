@@ -1,6 +1,7 @@
 import React, { useState }  from 'react'
 
-function registro()
+
+function Registro()
 {
 	const [ datos, setDatos ] = useState({ user: '', pass: '' })
 	const [ imprimir, setImprimir ] = useState('vacio')
