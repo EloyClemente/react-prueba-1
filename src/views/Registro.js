@@ -1,43 +1,63 @@
 import React, { useState }  from 'react'
+import 'firebase/auth'
+import { useFirebaseApp, useUser } from 'reactfire'
 
 
 function Registro()
 {
-	const [ datos, setDatos ] = useState({ email: '', password: '' })
-	const [ imprimir, setImprimir ] = useState('vacio')
+	const [ email, setEmail ] = useState('')
+	const [ password, setPassword ] = useState('')
+
+	const firebase = useFirebaseApp()
+	const user = useUser()
 
 
-
-	function handleInputChange(event)
+	const crearCuenta = async ()=>
 	{
-		setDatos({ ...datos, [event.target.name] : event.target.value })
+		await firebase.auth().createUserWithEmailAndPassword(email, password)
 	}
 
-
-	function enviarDatos(event)
+	const login = async ()=>
 	{
-		event.preventDefault()
-		setImprimir([ datos.email ] + [ datos.password ])
+		await firebase.auth().signInWithEmailAndPassword(email, password)
+	}
+
+	const logout = async ()=>
+	{
+		await firebase.auth().signOut()
 	}
 
 
 	return(
 		<div>
+			<br/>
 			<p>Página de contacto</p>
-			<form onSubmit={ enviarDatos }>
-				<input type="text" 
-					  name="email" 
-					  placeholder="Email"
-					  onChange={ handleInputChange }
-				/>
-				<input type="password" 
-					  name="password" 
-					  placeholder="Contraseña"
-					  onChange={ handleInputChange }
-				/>
-				<input type="submit" value="Enviar"/>
-			</form>
-			<p>{ imprimir }</p>
+			<br/>
+
+			{ user && <p>{ user.email }</p>}
+			
+			<br/>
+
+			{ !user &&
+
+				<div>
+					<input type="text" 
+						  name="email" 
+						  placeholder="Email"
+						  onChange={ (event)=> setEmail(event.target.value) }
+					/>
+					<input type="password" 
+						  name="password" 
+						  placeholder="Contraseña"
+						  onChange={ (event)=> setPassword(event.target.value) }
+					/>
+					<input type="submit" value="Crear cuenta" onClick={ crearCuenta }/>
+					<input type="submit" value="Iniciar sesión" onClick={ login }/>
+				</div>
+			}
+
+			{ user && <button onClick={ logout }>Cerrar sesión</button> }
+
 		</div>
 	)
 }
