@@ -25,4 +25,9 @@ input[type="reset"],
 input[type="button"],
 textarea{
 outline: none;}
+/*--------------------------------------------*/
 
+.login{
+	height: 30px;
+	border-bottom: 1px solid silver;
+}

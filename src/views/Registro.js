@@ -3,7 +3,7 @@ import React, { useState }  from 'react'
 
 function Registro()
 {
-	const [ datos, setDatos ] = useState({ user: '', pass: '' })
+	const [ datos, setDatos ] = useState({ email: '', password: '' })
 	const [ imprimir, setImprimir ] = useState('vacio')
 
 
@@ -17,7 +17,7 @@ function Registro()
 	function enviarDatos(event)
 	{
 		event.preventDefault()
-		setImprimir([ datos.user ] + [ datos.pass ])
+		setImprimir([ datos.email ] + [ datos.password ])
 	}
 
 
@@ -26,12 +26,12 @@ function Registro()
 			<p>Página de contacto</p>
 			<form onSubmit={ enviarDatos }>
 				<input type="text" 
-					  name="user" 
-					  placeholder="Nombre"
+					  name="email" 
+					  placeholder="Email"
 					  onChange={ handleInputChange }
 				/>
 				<input type="password" 
-					  name="pass" 
+					  name="password" 
 					  placeholder="Contraseña"
 					  onChange={ handleInputChange }
 				/>

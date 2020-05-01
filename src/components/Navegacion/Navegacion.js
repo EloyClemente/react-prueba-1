@@ -10,28 +10,28 @@ const Navegacion = () =>
 			<ul>
 				<li>
 					<NavLink 
-						to="/inicio" 
+						to="/react-prueba-1/inicio" 
 						activeClassName="link-activo">
 						Inicio
 					</NavLink>
 				</li>
 				<li>
 					<NavLink 
-						to="/registro" 
+						to="/react-prueba-1/registro" 
 						activeClassName="link-activo">
 						Registro
 					</NavLink>
 				</li>
 				<li>
 					<NavLink 
-						to="/curso" 
+						to="/react-prueba-1/curso" 
 						activeClassName="link-activo">
 						Curso
 					</NavLink>
 				</li>
 				<li>
 					<NavLink 
-						to="/contacto" 
+						to="/react-prueba-1/contacto" 
 						activeClassName="link-activo">
 						Contacto
 					</NavLink>

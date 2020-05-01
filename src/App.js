@@ -15,6 +15,7 @@ import Contacto from './views/Contacto'
 
 
 function App() {
+
       return (
             <BrowserRouter>
                   <div className="App">
@@ -22,16 +23,16 @@ function App() {
                         <Navegacion/>
 
                         <Switch>
-                              <Route path="/inicio">
+                              <Route path="/react-prueba-1/inicio">
                                     <Inicio/>
                               </Route>
-                              <Route path="/registro">
+                              <Route path="/react-prueba-1/registro">
                                     <Registro/>
                               </Route>
-                              <Route path="/curso">
+                              <Route path="/react-prueba-1/curso">
                                     <Curso/>
                               </Route>
-                              <Route path="/contacto">
+                              <Route path="/react-prueba-1/contacto">
                                     <Contacto/>
                               </Route>
                         </Switch>
