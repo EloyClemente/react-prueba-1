@@ -34,6 +34,12 @@ function App() {
                               <Route path="/react-prueba-1/contacto">
                                     <Contacto/>
                               </Route>
+                              <Route path="/react-prueba-1">
+                                    <Inicio/>
+                              </Route>
+                              <Route path="/">
+                                    <Inicio/>
+                              </Route>
                         </Switch>
 
                   </div>
