@@ -5,6 +5,7 @@ import {
   BrowserRouter,
   Switch,
   Route,
+  Redirect
 } from "react-router-dom";
 
 import Navegacion from './components/Navegacion/Navegacion'
@@ -25,6 +26,7 @@ function App() {
                               <Route path="/react-prueba-1/inicio">
                                     <VistaInicio/>
                               </Route>
+
                               <Route path="/react-prueba-1/registro">
                                     <VistaRegistro/>
                               </Route>
@@ -35,13 +37,9 @@ function App() {
 
                               <Route path="/react-prueba-1/contacto">
                                     <VistaContacto/>
-                              </Route>
-                              <Route path="/react-prueba-1">
-                                    <VistaInicio/>
-                              </Route>
-                              <Route path="/">
-                                    <VistaInicio/>
-                              </Route>
+                              </Route>          
+
+                              <Redirect from="/react-prueba-1" to="/react-prueba-1/inicio" />        
                         </Switch>
 
                   </div>
