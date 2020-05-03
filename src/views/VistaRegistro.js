@@ -7,27 +7,16 @@ export const AuthContext = React.createContext()
 
 function Registro()
 {
-	const [ email, setEmail ] = useState('')
+	const firebase = useFirebaseApp()
+	const user     = useUser()
+
+	const [ email, setEmail ]       = useState('')
 	const [ password, setPassword ] = useState('')
 
-	const firebase = useFirebaseApp()
-	const user = useUser()
 
-
-	const crearCuenta = async ()=>
-	{
-		await firebase.auth().createUserWithEmailAndPassword(email, password)
-	}
-
-	const login = async ()=>
-	{
-		await firebase.auth().signInWithEmailAndPassword(email, password)
-	}
-
-	const logout = async ()=>
-	{
-		await firebase.auth().signOut()
-	}
+	const crearCuenta = async ()=> { await firebase.auth().createUserWithEmailAndPassword(email, password) }
+	const login       = async ()=> { await firebase.auth().signInWithEmailAndPassword(email, password) }
+	const logout      = async ()=> { await firebase.auth().signOut() }
 
 
 	return(

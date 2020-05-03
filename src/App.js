@@ -23,22 +23,10 @@ function App() {
                         <Navegacion/>
 
                         <Switch>
-                              <Route path="/react-prueba-1/inicio">
-                                    <VistaInicio/>
-                              </Route>
-
-                              <Route path="/react-prueba-1/registro">
-                                    <VistaRegistro/>
-                              </Route>
-
-                              <Route path="/react-prueba-1/curso">
-                                    <VistaCurso/>
-                              </Route>
-
-                              <Route path="/react-prueba-1/contacto">
-                                    <VistaContacto/>
-                              </Route>          
-
+                              <Route path="/react-prueba-1/inicio"   component={ VistaInicio } />                            
+                              <Route path="/react-prueba-1/registro" component={ VistaRegistro } />
+                              <Route path="/react-prueba-1/curso"    component={ VistaCurso } />                          
+                              <Route path="/react-prueba-1/contacto" component={ VistaContacto } />                                
                               <Redirect from="/react-prueba-1" to="/react-prueba-1/inicio" />        
                         </Switch>
 
