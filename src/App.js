@@ -8,10 +8,10 @@ import {
 } from "react-router-dom";
 
 import Navegacion from './components/Navegacion/Navegacion'
-import Inicio from './views/Inicio'
-import Registro from './views/Registro'
-import Curso from './views/Curso'
-import Contacto from './views/Contacto'
+import VistaInicio from './views/VistaInicio'
+import VistaRegistro from './views/VistaRegistro'
+import VistaCurso from './views/VistaCurso'
+import VistaContacto from './views/VistaContacto'
 
 
 function App() {
@@ -23,22 +23,24 @@ function App() {
 
                         <Switch>
                               <Route path="/react-prueba-1/inicio">
-                                    <Inicio/>
+                                    <VistaInicio/>
                               </Route>
                               <Route path="/react-prueba-1/registro">
-                                    <Registro/>
+                                    <VistaRegistro/>
                               </Route>
+
                               <Route path="/react-prueba-1/curso">
-                                    <Curso/>
+                                    <VistaCurso/>
                               </Route>
+
                               <Route path="/react-prueba-1/contacto">
-                                    <Contacto/>
+                                    <VistaContacto/>
                               </Route>
                               <Route path="/react-prueba-1">
-                                    <Inicio/>
+                                    <VistaInicio/>
                               </Route>
                               <Route path="/">
-                                    <Inicio/>
+                                    <VistaInicio/>
                               </Route>
                         </Switch>
 

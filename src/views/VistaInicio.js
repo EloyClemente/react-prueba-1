@@ -1,6 +1,7 @@
 import React from 'react'
 
-const Inicio = () =>
+
+export default function VistaInicio()
 {
 	return(
 		<div>
@@ -24,4 +25,3 @@ const Inicio = () =>
 	)
 }
 
-export default Inicio
