@@ -1,10 +1,10 @@
 
 export default {
-	apiKey: "AIzaSyAIj4ZB8H1kmsAVVAlNdPtVm0z_kCaBzTw",
-	authDomain: "react-prueba-1-a66bc.firebaseapp.com",
-	databaseURL: "https://react-prueba-1-a66bc.firebaseio.com",
-	projectId: "react-prueba-1-a66bc",
-	storageBucket: "react-prueba-1-a66bc.appspot.com",
-	messagingSenderId: "155055231301",
-	appId: "1:155055231301:web:9d26425cf92573a1062e2c"
+	apiKey: "AIzaSyDPIpTm7mTAu4tYj5_M403wkYAGDC7TflU",
+     authDomain: "react-prueba-2.firebaseapp.com",
+     databaseURL: "https://react-prueba-2.firebaseio.com",
+     projectId: "react-prueba-2",
+     storageBucket: "react-prueba-2.appspot.com",
+     messagingSenderId: "675033682950",
+     appId: "1:675033682950:web:ff6e267a7bcb165636df87"
 }
