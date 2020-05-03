@@ -2,10 +2,8 @@ import React, { useState }  from 'react'
 import 'firebase/auth'
 import { useFirebaseApp, useUser } from 'reactfire'
 
-export const AuthContext = React.createContext()
 
-
-function Registro()
+export default function Registro()
 {
 	const firebase = useFirebaseApp()
 	const user     = useUser()
@@ -52,5 +50,3 @@ function Registro()
 		</div>
 	)
 }
-
-export default Registro

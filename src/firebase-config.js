@@ -1,5 +1,5 @@
 
-export default{
+export default {
 	apiKey: "AIzaSyAIj4ZB8H1kmsAVVAlNdPtVm0z_kCaBzTw",
 	authDomain: "react-prueba-1-a66bc.firebaseapp.com",
 	databaseURL: "https://react-prueba-1-a66bc.firebaseio.com",
